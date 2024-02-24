@@ -2,32 +2,143 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  min-height: 100vh;
+  width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.form {
+  position: absolute;
+  top: 25%;
+  right: 13%
+}
+
+.fibertitle {
+  top: 18%;
+  right: 13.8%;
+}
+
+
+.accordion {
+  border-top: 1px solid #ccc;
+  margin-top: 1rem;
+}
+
+.item {
+  border-bottom: 1px solid #ccc;
+}
+
+.itemBtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: left;
+  color: #007bff;
+  background-color: transparent;
+  border: none;
+}
+
+.itemBtn:hover {
+  background-color: #f3f3f3;
+}
+
+.itemBtnExpanded {
+  background-color: #e7e7e7;
+}
+
+.itemContent {
+  transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.itemPanel {
+  padding: 1rem;
+}
+
+.chevron {
+  margin-left: auto;
+  transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.itemBtnExpanded .chevron {
+  transform: rotate(180deg);
+}
+
+
+@media only screen and (max-width: 1775px) {
+  .form {
+    right: 10%;
+  }
+  .fibertitle {
+    right: 11%;
+  }
+  
+  .chica {
+    left: 20vw
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media only screen and (max-width: 1370px) {
+  .chica {
+    left: 15vw
+  }
+
+  .form {
+    right: 15px
+  }
+
+  .fibertitle {
+    right: 32px;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media only screen and (max-width: 770px) {
+  .form {
+    top: 16%;
+    right: 15px;
+  }
+  .fibertitle {
+    top: 8%;
+    right: 30px;
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 764px) {
+  .form {
+    top: 55%;
+    right: 15vw
+  }
+  .fibertitle {
+    top: 50%;
+    right: 18.5vw;
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .form {
+    top: 52%;
+    right: 45px
+  }
+  .fibertitle {
+    top: 50%;
+    right: 17%;
+    width: 250px;
   }
 }
