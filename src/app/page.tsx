@@ -66,7 +66,7 @@ export default function Home() {
           className="h-[120px] bg-primary flex py-6"
         >
           <div className="flex flex-row max-w-[1100px] justify-end w-full m-auto">
-            <Link href={'tel:4187185'}>
+            <Link href={'tel:014187185'}>
               <img
                 src={'/call.png'}
                 width={190}

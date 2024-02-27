@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React  from 'react';
 
 const NavBar = () => {
@@ -11,8 +12,10 @@ const NavBar = () => {
 					className='w-[150px] md:w-[200px]'
 				/>
 				<div>
-					<p className='text-bold text-white text-right text-[12px]'>Llámanos al</p>
-					<p className='text-white text-2xl'>(01) <strong>418-7185</strong></p>
+					<Link href={'tel:014187185'}>
+						<p className='text-bold text-white text-right text-[12px]'>Llámanos al</p>
+						<p className='text-white text-2xl'>(01) <strong>418-7185</strong></p>
+					</Link>
 				</div>
 			</div>
 		</nav>
