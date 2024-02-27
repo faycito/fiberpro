@@ -1,13 +1,16 @@
 'use client'
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Montserrat } from "next/font/google";
+
 import Next from '../../public/arrownext.png';
 import Back from '../../public/arrowback.png';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
+
+const mont = Montserrat({subsets: ['latin']});
 
 const products = [
 	{ 
@@ -107,7 +110,7 @@ const Slider = () => {
 						)}
 						{ product.applyDouble ? (
 							<>
-								<p className='text-sm text-center text-white font-thin'>DUPLICA TU VELOCIDAD</p>
+								<p className={`${mont.className} text-[12px] text-center text-white font-regular`}>DUPLICA TU VELOCIDAD</p>
 								<p className='text-sm text-center text-white mt-2 mb-6'>x3 meses</p>
 							</>
 						) : (
@@ -117,8 +120,8 @@ const Slider = () => {
 							</>
 						)}
 						<div className='relative pb-6'>
-							<p className='text-center text-3xl my-2 text-white bg-secondary py-2 rounded-full'>s/ <strong>{Math.floor(product.amount/100)}</strong></p>
-							<p className='text-primary bg-white absolute px-4 rounded-full font-bold text-[12px] bottom-[20px] left-10'>MENSUALES</p>
+							<p className={`${mont.className} font-[800] text-center text-3xl my-2 text-white bg-secondary py-2 rounded-full`}>s/{Math.floor(product.amount/100)}</p>
+							<p className='text-primary bg-white absolute px-4 rounded-full font-bold text-[12px] bottom-[20px] right-[50%] translate-x-[50%]'>MENSUALES</p>
 						</div>
 						<div className='mt-2 text-center'>
 							<p className='text-sm text-white font-thin'>s/ 0 costo de instalación</p>

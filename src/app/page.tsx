@@ -4,14 +4,15 @@ import Image from "next/image";
 import Contact from "@/components/Contact";
 import Link from "next/link";
 import Terms from "@/components/Terms";
+import SocialColumn from "@/components/SocialColumn";
 
 const images = [
   {src: '/discord.png', url: '#'},
   {src: '/twich.png', url: '#'},
-  {src: '/instagram.png', url: '#'},
-  {src: '/facebook.png', url: '#'},
-  {src: '/yt.png', url: '#'},
-  {src: '/tiktok.png', url: '#'} 
+  {src: '/instagram.png', url: 'https://www.instagram.com/fiberpro_oficial/'},
+  {src: '/facebook.png', url: 'https://www.facebook.com/FiberProPeru'},
+  {src: '/yt.png', url: 'https://www.youtube.com/@fiberpro'},
+  {src: '/tiktok.png', url: 'https://www.tiktok.com/@fiberpro_peru'} 
 ]
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
           className="md:hidden w-full"
         />
         <Contact/>
+        <SocialColumn/>
       </section>
       <FSection id={'productos'}>
         <h2 className="text-center font-bold text-primary mb-5 text-5xl">PLANES HOGAR</h2>
@@ -119,7 +121,13 @@ export default function Home() {
         <h3 className={'text-center text-primary text-2xl mt-[-5px] mb-8'}>Síguenos en nuestras redes sociales</h3>
         <div className="flex flex-row flex-wrap items-center justify-center">
           { images.map((img, i) => (
-            <Link href={img.url} className="mr-4 md:mr-6" key={`social-${i}`}>
+            <Link 
+              href={img.url} 
+              className="mr-4 md:mr-6" 
+              key={`social-${i}`}
+					    target={img.url.includes('#') ? '_self' : '_blank'}
+            
+            >
               <img
                 src={img.src}
                 width={40}
