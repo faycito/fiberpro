@@ -135,7 +135,7 @@ button:focus {
 
 @media only screen and (max-width: 764px) {
   .form {
-    top: 55%;
+    top: 60%;
     right: 15vw
   }
   .fibertitle {
@@ -153,7 +153,7 @@ button:focus {
 @media only screen and (max-width: 400px) {
   /* generete the .form class as center */
   .form {
-    top: 52%;
+    top: 58%;
     right: 50%;
     transform: translateX(50%);
   }
@@ -165,4 +165,48 @@ button:focus {
   .colsocials {
     right: 5%;
   }
+}
+
+.element-slider {
+  border-width: 4px;
+  background-color: white;
+  border-color: #020CCC;
+  padding: 8px 4px;
+  border-radius: 15px;
+  background-color: #020CCC;
+  width: 200px;
+}
+
+.element-slider:hover {
+  border-width: 4px;
+  background-color: white;
+  
+  transition: background-color 0.3s ease;
+  
+  * {
+    color: #020CCC
+  }
+
+  .monthly {
+    background-color: #020CCC;
+    color: white;
+  }
+
+  .priceItem {
+    color: white;
+  }
+
+  a {
+    color: white;
+    background-color: #020CCC;
+
+  }
+  .icon-img {
+   filter: brightness(45%) sepia(100%) hue-rotate(200deg)
+  }
+}
+
+.slick-prev:before, .slick-next:before {
+  color:#020CCC !important;
+  opacity: 1 !important;
 }

@@ -6,8 +6,8 @@ import React from 'react';
 const images = [
 	{ src: '/facebook-white.png', alt: 'fiberpro facebook', url: 'https://www.facebook.com/FiberProPeru' },
 	{ src: '/instagram-white.png', alt: 'fiberpro instagram', url: 'https://www.instagram.com/fiberpro_oficial/'},
-	{ src: '/discord-white.png', alt: 'fiberpro discord' , url: '#'},
-	{ src: '/twich-white.png', alt: 'fiberpro twich', url: '#'},
+	{ src: '/discord-white.png', alt: 'fiberpro discord' , url: 'https://discord.gg/KjC2JUWhvc'},
+	{ src: '/twich-white.png', alt: 'fiberpro twich', url: 'https://www.twitch.tv/fiberpro_pe'},
 	{ src: '/yt-white.png', alt: 'fiberpro youtube', url: 'https://www.youtube.com/@fiberpro'},
 	{ src: '/tiktok-white.png', alt: 'fiberpro tiktok', url: 'https://www.tiktok.com/@fiberpro_peru'},
 ];

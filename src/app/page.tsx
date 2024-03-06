@@ -7,8 +7,8 @@ import Terms from "@/components/Terms";
 import SocialColumn from "@/components/SocialColumn";
 
 const images = [
-  {src: '/discord.png', url: '#'},
-  {src: '/twich.png', url: '#'},
+  {src: '/discord.png', url: 'https://discord.gg/KjC2JUWhvc'},
+  {src: '/twich.png', url: 'https://www.twitch.tv/fiberpro_pe'},
   {src: '/instagram.png', url: 'https://www.instagram.com/fiberpro_oficial/'},
   {src: '/facebook.png', url: 'https://www.facebook.com/FiberProPeru'},
   {src: '/yt.png', url: 'https://www.youtube.com/@fiberpro'},
@@ -19,20 +19,22 @@ export default function Home() {
   
   return (
     <main className="h-full">
-      <section className="relative h-[750px] md:h-[500px] bg-[#0012A0]">
+      <section className="relative h-[800px] md:h-[500px] bg-[#0012A0]">
         <Image
           alt="promocion fiber pro"
           src={"/desktop.jpg"}
           width={2000}
           height={350}
           className="hidden md:block w-full h-full object-cover"
-        />
+          priority={true}
+          />
         <Image
           alt="promocion fiber pro"
           src={"/mobile.jpg"}
           width={720}
-          height={500}
+          height={300}
           className="md:hidden w-full"
+          priority={true}
         />
         <Contact/>
         <SocialColumn/>
