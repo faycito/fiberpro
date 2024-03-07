@@ -5,6 +5,7 @@
 body {
   min-height: 100vh;
   width: 100%;
+  overflow-x:  hidden;
 }
 
 .swiper {
@@ -126,10 +127,57 @@ button:focus {
 
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 1050px){
   .slick-list {
     overflow: hidden !important;
   }
+  .slick-track {
+    text-align: center;
+  }
+  .chica {
+    left: 5vw
+  }
+
+}
+
+@media only screen and (min-width: 770px){
+  .slick-next:before{
+    display: none;
+  }
+  .element-slider:hover {
+    border-width: 4px;
+    background-color: white;
+    transform: scale(1.03);
+    z-index:99;
+    transition: transform 0.3s ease-in-out;
+    
+    * {
+      color: #020CCC
+    }
+  
+    .monthly {
+      background-color: #020CCC;
+      color: white;
+    }
+  
+    .priceItem {
+      color: white;
+    }
+  
+    a {
+      color: white;
+      background-color: #020CCC;
+  
+    }
+    .icon-img {
+     filter: brightness(45%) sepia(100%) hue-rotate(200deg)
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+
+
   .form {
     top: 16%;
     right: 15px;
@@ -185,35 +233,6 @@ button:focus {
   width: 200px;
 } 
 
-.element-slider:hover {
-  border-width: 4px;
-  background-color: white;
-  transform: scale(1.03);
-  z-index:99;
-  transition: transform 0.3s ease-in-out;
-  
-  * {
-    color: #020CCC
-  }
-
-  .monthly {
-    background-color: #020CCC;
-    color: white;
-  }
-
-  .priceItem {
-    color: white;
-  }
-
-  a {
-    color: white;
-    background-color: #020CCC;
-
-  }
-  .icon-img {
-   filter: brightness(45%) sepia(100%) hue-rotate(200deg)
-  }
-}
 .colsocials a:hover,
 #social-network a:hover {
   transform: scale(1.2);
