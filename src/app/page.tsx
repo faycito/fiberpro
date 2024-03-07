@@ -45,7 +45,7 @@ export default function Home() {
         <h2 className="text-center font-[800] text-primary mb-5 text-5xl animate-fade-up">PLANES HOGAR</h2>
         <p className="text-center font-medium mb-5 text-xl animate-fade-up">Duplicamos tu velocidad los <strong className="text-primary">3  primeros meses</strong></p>
         <div className="text-center mb-10">
-          <p className={mont.className + " font-bold text-2xl p-2 bg-slate-200 max-w-[500px] m-auto text-primary animate-fade-up"}>¡Instalación Gratis!</p>
+          <p className={mont.className + " font-bold text-2xl p-2 bg-slate-200 max-w-[500px] m-auto text-primary animate-fade-up rounded-[20px]"}>¡Instalación Gratis!</p>
         </div>
         <Slider/>
       </FSection>
