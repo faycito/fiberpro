@@ -87,7 +87,7 @@ const SliderLocal = () => {
 			{ products.map((product, indx) => (
 					<div
 						key={indx}
-						className={`element-slider md:max-w-[220px]`}
+						className={`element-slider md:max-w-[210px]`}
 						onMouseOver={(e) => {
 							if(ref.current[indx]){
 								ref.current[indx].src = '/X3-azul.svg'
