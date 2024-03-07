@@ -6,7 +6,7 @@ const Footer = () => {
 		<footer className='w-full bg-primary h-[120px] flex flex-col items-center'>
 			<div className='w-full max-w-[1100px] m-auto flex flex-row justify-between items-center flex-wrap px-4 bg-primary py-4'>
 				<img
-					src={'/logo.png'}
+					src={'/logo.svg'}
 					width={200}
 					alt={'FiberPro logo'}
 				/>

@@ -214,6 +214,11 @@ button:focus {
    filter: brightness(45%) sepia(100%) hue-rotate(200deg)
   }
 }
+.colsocials a:hover,
+#social-network a:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
 
 .slick-prev:before, .slick-next:before {
   color:#020CCC !important;

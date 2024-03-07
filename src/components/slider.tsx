@@ -147,7 +147,7 @@ const SliderLocal = () => {
 							<p className='text-white mb-4'>costo de instalación</p>
 							<Link
 								className='bg-white text-primary rounded-full text-xl py-2 px-8 mt-6 w-full font-bold'
-								href={'https://wa.me/51014187185'}
+								href={`https://wa.me/51014187185?text=Hola quiero información de${product.speedBonus ? ' la promo' : 'l servicio'} de ${product.speedBonus || product.speed} mpbs`}
 							>¡LO QUIERO!</Link>
 							<div className='flex flex-row flex-wrap justify-evenly mt-4'>
 								<div className='max-w-[50px] text-center'>

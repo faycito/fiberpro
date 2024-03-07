@@ -6,7 +6,7 @@ const NavBar = () => {
 		<nav className='w-full bg-primary px-2 md:px-0 h-[60px] md:h-[100px] flex flex-row items-center'>
 			<div className='w-full max-w-[1100px] m-auto flex flex-row justify-between items-center'>
 				<img
-					src={'/logo.png'}
+					src={'/logo.svg'}
 					width={200}
 					alt={'FiberPro logo'}
 					className='w-[150px] md:w-[200px]'
