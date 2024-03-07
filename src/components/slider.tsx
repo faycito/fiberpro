@@ -89,12 +89,12 @@ const SliderLocal = () => {
 						key={indx}
 						className={`element-slider md:max-w-[210px]`}
 						onMouseOver={(e) => {
-							if(ref.current[indx]){
+							if(window.innerWidth >= 1050 && ref.current[indx]){
 								ref.current[indx].src = '/X3-azul.svg'
 							}
 						}}
 						onMouseLeave={(e) => {
-							if(ref.current[indx]){
+							if(window.innerWidth >= 1050 && ref.current[indx]){
 								ref.current[indx].src = '/X3-white.svg'
 							}
 						}}
