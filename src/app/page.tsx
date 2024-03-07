@@ -5,7 +5,9 @@ import Contact from "@/components/Contact";
 import Link from "next/link";
 import Terms from "@/components/Terms";
 import SocialColumn from "@/components/SocialColumn";
+import { Montserrat } from 'next/font/google';
 
+const mont = Montserrat({subsets: ['latin']});
 const images = [
   {src: '/discord.png', url: 'https://discord.gg/KjC2JUWhvc'},
   {src: '/twich.png', url: 'https://www.twitch.tv/fiberpro_pe'},
@@ -40,10 +42,10 @@ export default function Home() {
         <SocialColumn/>
       </section>
       <FSection id={'productos'}>
-        <h2 className="text-center font-bold text-primary mb-5 text-5xl">PLANES HOGAR</h2>
-        <p className="text-center font-medium mb-5">Duplicamos tu velocidad los <strong className="text-primary">3  primeros meses</strong></p>
+        <h2 className="text-center font-[800] text-primary mb-5 text-5xl animate-fade-up">PLANES HOGAR</h2>
+        <p className="text-center font-medium mb-5 text-xl animate-fade-up">Duplicamos tu velocidad los <strong className="text-primary">3  primeros meses</strong></p>
         <div className="text-center mb-10">
-          <p className="font-bold text-2xl p-2 bg-slate-200 max-w-[500px] m-auto text-primary">¡Instalación Gratis!</p>
+          <p className={mont.className + " font-bold text-2xl p-2 bg-slate-200 max-w-[500px] m-auto text-primary animate-fade-up"}>¡Instalación Gratis!</p>
         </div>
         <Slider/>
       </FSection>
@@ -76,7 +78,7 @@ export default function Home() {
                 className="cursor-pointer"
               /> 
             </Link>
-            <Link href={'https://wa.me/51942115688'} target="_blank">
+            <Link href={'https://wa.me/51014187185'} target="_blank">
               <img
                 src={'/whatsapp.png'}
                 width={190}

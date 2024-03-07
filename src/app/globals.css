@@ -101,6 +101,10 @@ button:focus {
   }
 }
 
+.slick-list {
+  overflow: visible !important;
+}
+
 @media only screen and (max-width: 1370px) {
   .chica {
     left: 15vw
@@ -119,9 +123,13 @@ button:focus {
     flex-direction: row;
     top: 7%;
   }
+
 }
 
 @media only screen and (max-width: 770px) {
+  .slick-list {
+    overflow: hidden !important;
+  }
   .form {
     top: 16%;
     right: 15px;
@@ -175,13 +183,14 @@ button:focus {
   border-radius: 15px;
   background-color: #020CCC;
   width: 200px;
-}
+} 
 
 .element-slider:hover {
   border-width: 4px;
   background-color: white;
-  
-  transition: background-color 0.3s ease;
+  transform: scale(1.1);
+  z-index:99;
+  transition: transform 0.3s ease-in-out;
   
   * {
     color: #020CCC

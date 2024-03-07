@@ -1,5 +1,5 @@
 'use client'
-import React, { useMemo } from 'react';
+import React, { useMemo, useRef } from 'react';
 import { Montserrat } from "next/font/google";
 import Slider from "react-slick";
 import { register } from 'swiper/element/bundle';
@@ -45,6 +45,8 @@ const settings = {
   };
 
 const SliderLocal = () => {
+
+	const ref = useRef<any>([]);
 	const products = useMemo(() => [
 		{ 
 			speed: 200,
@@ -53,19 +55,19 @@ const SliderLocal = () => {
 			applyDouble: true
 		},
 		{
-			speed: 300,
-			speedBonus: 600,
+			speed: 250,
+			speedBonus: 500,
 			amount: 9000,
 			applyDouble: true
 		},
 		{
-			speed: 400,
-			speedBonus: 800,
+			speed: 300,
+			speedBonus: 600,
 			amount: 11000,
 			applyDouble: true
 		},
 		{
-			speed: 600,
+			speed: 700,
 			speedBonus: 0,
 			amount: 15000,
 			applyDouble: false
@@ -79,38 +81,56 @@ const SliderLocal = () => {
 	], [])
 
 	return (
-		<div className='px-8 sm:px-0'>
+		<div className='px-8 sm:px-0 animate-fade-up'>
 			
 			<Slider {...settings}>
 			{ products.map((product, indx) => (
 					<div
 						key={indx}
 						className={`element-slider md:max-w-[220px]`}
+						onMouseOver={(e) => {
+							if(ref.current[indx]){
+								ref.current[indx].src = '/X3-azul.svg'
+							}
+						}}
+						onMouseLeave={(e) => {
+							if(ref.current[indx]){
+								ref.current[indx].src = '/X3-white.svg'
+							}
+						}}
 					>
 						<p className='text-[12px] text-center font-bold text-white mb-2'>INTERNET 100% FIBRA ÓPTICA</p>
 						{ product.speedBonus ? (
 							<>
 								<p className='text-center line-through decoration-white font-bold text-white text-sm'>{product.speed} mbps</p>
-								<h3 className='text-[4rem] text-white font-bold text-center mt-10 mb-4 leading-4'>{product.speedBonus}</h3>
-								<p className='text-white text-4xl text-center'>mbps</p>
+								<h3 className='text-[4rem] text-white font-[800] text-center mt-10 mb-2 leading-4'>{product.speedBonus}</h3>
+								<p className='text-white text-[3rem] text-center font-[800]'>mbps</p>
 							</>
 						) : (
 							<>
 								<img
 									src={'/repetidor.png'}
-									width={100}
-									height={100}
+									width={120}
+									height={120}
 									alt={'Repetidor Fiber Pro'}
-									className='m-auto'
+									className='m-auto mt-6'
 								/>
-								<h3 className='text-[2rem] text-white font-bold text-center mb-4 leading-4'>{product.speed}</h3>
-								<p className='text-white text-2xl text-center'>mbps</p>
+								<h3 className='text-[3rem] text-white font-[800] text-center mb-2 leading-4'>{product.speed}</h3>
+								<p className='text-white text-3xl text-center font-[800]'>mbps</p>
 							</>
 						)}
 						{ product.applyDouble ? (
 							<>
 								<p className={`${mont.className} text-[12px] text-center text-white font-regular mt-4`}>DUPLICA TU VELOCIDAD</p>
-								<p className='text-sm text-center text-white mt-2 mb-6'>x3 meses</p>
+								<img
+									ref={el => ref.current[indx] = el}
+									src={'/X3-white.svg'}
+									width={75}
+									height={75}
+									className='m-auto mt-[-15px]'
+									alt={'Fibiber Pro x3'}
+								/>
+								<p className='text-2xl text-center text-white mb-2 font-[800] mt-[-10px]'>meses</p>
 							</>
 						) : (
 							<>
@@ -119,7 +139,7 @@ const SliderLocal = () => {
 							</>
 						)}
 						<div className='relative mb-6'>
-							<p className={`${mont.className} font-[800] text-center text-4xl my-2 text-white bg-secondary py-2 rounded-full priceItem`}>s/{Math.floor(product.amount/100)}</p>
+							<p className={`font-[800] text-center text-5xl my-2 text-white bg-secondary py-2 rounded-full priceItem`}><span className={'text-2xl priceItem'}>s/</span>{Math.floor(product.amount/100)}</p>
 							<p className='text-primary bg-white absolute px-4 rounded-full font-bold text-[12px] bottom-[-10px] right-[50%] translate-x-[50%] monthly'>MENSUALES</p>
 						</div>
 						<div className='mt-2 text-center want'>
