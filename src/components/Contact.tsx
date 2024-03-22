@@ -20,9 +20,27 @@ const Contact = () => {
 	}
 
 
-	const onSubmit =  (ev: React.FormEvent<HTMLFormElement>) => {
-		ev.preventDefault()
-		console.log(ev);
+	const onSubmit =  async (ev: React.FormEvent<HTMLFormElement>) => {
+		try {
+
+			ev.preventDefault();	
+			const body = {
+				name: docNum,
+				phone,
+				provider: 'LandingPage Pixelio',
+				campaign: 'Testing'
+			}
+
+			const response = await fetch('http://201.218.159.60:5000/api/leads', {
+				body: JSON.stringify(body),
+				method: 'POST'
+			});
+	
+			const data = await response.json();
+			console.log(data);
+		} catch (error) {
+			console.log(error);			
+		}
 	}
 	
 	return (
