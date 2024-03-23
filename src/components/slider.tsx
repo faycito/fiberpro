@@ -123,6 +123,7 @@ const SliderLocal = () => {
 							<>
 								<p className={`${mont.className} text-[12px] text-center text-white font-regular mt-4`}>DUPLICA TU VELOCIDAD</p>
 								<img
+									//@ts-ignore
 									ref={el => ref.current[indx] = el}
 									src={'/X3-white.svg'}
 									width={75}
