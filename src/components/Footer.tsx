@@ -10,10 +10,10 @@ const Footer = () => {
 					width={200}
 					alt={'FiberPro logo'}
 				/>
-				<Link href={'#'} className='text-white'>
+				<Link href={'https://fiberpro.com.pe/files/T%C3%89RMINOS%20Y%20CONDICIONES%20DE%20LOS%20PLANES%20DE%20CONTRATACION%2006.04.24.pdf'} target='_blank' className='text-white'>
 					Aviso Legal
 				</Link>
-				<Link href={'#'} className='text-white'>
+				<Link href={'https://fiberpro.com.pe/files/Terminos%20y%20condiciones%20del%20sitio%20web.pdf'} target='_blank' className='text-white'>
 					Políticas de Privacidad
 				</Link>
 				<div>
