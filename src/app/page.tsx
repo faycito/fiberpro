@@ -78,7 +78,7 @@ export default function Home() {
                 className="cursor-pointer"
               /> 
             </Link>
-            <Link href={'https://wa.me/51014187185'} target="_blank">
+            <Link href={'https://wa.me/51987182418?text= Hola quisiera información acerca de sus servicios'} target="_blank">
               <img
                 src={'/whatsapp.png'}
                 width={190}

@@ -32,7 +32,7 @@ const Contact = () => {
 				campaing: 'Testing'
 			}
 
-			const response = await fetch('http://192.168.31.78:3001/api/leads', {
+			const response = await fetch('https://back.fiberpro.com.pe/api/leads', {
 				body: JSON.stringify(body),
 				method: 'POST',
 				headers: {
@@ -43,7 +43,7 @@ const Contact = () => {
 	
 			const data = await response.json();
 			console.log(data.message)
-			setSuccess(data.message);
+			setSuccess('Tus datos fueron registrados, pronto te llamaremos');
 		} catch (error) {
 			console.log("ERROR")
 			console.log(error);			
